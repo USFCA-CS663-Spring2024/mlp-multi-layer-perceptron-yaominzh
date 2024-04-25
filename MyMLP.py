@@ -1,3 +1,17 @@
+"""
+This part is to implement the MLP from scratch. I refer to the two articles as mentioned in assignment requirements.
+1. https://www.freecodecamp.org/news/building-a-neural-network-from-scratch/
+2. https://towardsdatascience.com/step-by-step-guide-to-building-your-own-neural-network-from-scratch-df64b1c5ab6e
+
+
+As to loss/cost function, the articles use Cross-Entropy Loss. Here, Mean Squared Error is used as required by the assignment.
+
+np.dot() is used to calculate the dot product of two arrays in the articles. here @ is used as it's more readable. @ is a syntactic sugar for np.dot().
+
+sigmoid() is used as activation function in the articles. Here, on top of sigmoid(), ReLU() is also required by the assignment.
+
+class variables a_vals and z_vals are used to store the values of activations and linear hypothesis respectively. By using a_vals and z_vals, I don't need to pass caches around as in the freecodecamp article. This modification makes the code structure different from the articles, but more readable to me. I don't fancy passing caches around.
+"""
 import numpy as np
 
 
